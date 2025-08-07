@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { 
   DollarSign, TrendingUp, Shield, Package, CheckCircle, 
   Laptop, Users, Award, BarChart3, Clock, Phone, 
@@ -23,8 +24,8 @@ export default function Home() {
   const services = [
     {
       icon: DollarSign,
-      title: "SBA 7(a) Small Dollar Expertise",
-      description: "Specialized in loans under $350,000 with streamlined processing that reduces approval time by 40%",
+      title: "SBA 7(a) Small Business Expertise",
+      description: "Specialized in efficient small business lending with streamlined processing that reduces approval time by 40%",
       highlight: true
     },
     {
@@ -57,7 +58,7 @@ export default function Home() {
 
   const stats = [
     { value: "40%", label: "Faster Processing" },
-    { value: "$350K", label: "Small Dollar Focus" },
+    { value: "25%", label: "Volume Increase" },
     { value: "30+", label: "States Served" },
     { value: "98%", label: "Approval Rate" }
   ]
@@ -80,17 +81,14 @@ export default function Home() {
         <div className="section-padding py-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">B</span>
-              </div>
-              <span className="font-bold text-xl text-primary">BOD Financial</span>
+              <img src="/images/bod_logo_8.24-(1).png" alt="BOD Financial Group" className="h-12" />
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
               <a href="#services" className="text-primary hover:text-secondary transition">Services</a>
               <a href="#technology" className="text-primary hover:text-secondary transition">Technology</a>
-              <a href="#about" className="text-primary hover:text-secondary transition">About</a>
-              <a href="#resources" className="text-primary hover:text-secondary transition">Resources</a>
+              <a href="#success" className="text-primary hover:text-secondary transition">Success Stories</a>
+              <Link href="/resources" className="text-primary hover:text-secondary transition">Resources</Link>
               <a href="#contact" className="btn-primary">Get Started</a>
             </div>
 
@@ -108,11 +106,11 @@ export default function Home() {
       {isMenuOpen && (
         <div className="fixed inset-0 bg-white z-40 pt-20">
           <div className="flex flex-col space-y-4 p-6">
-            <a href="#services" className="text-primary text-lg">Services</a>
-            <a href="#technology" className="text-primary text-lg">Technology</a>
-            <a href="#about" className="text-primary text-lg">About</a>
-            <a href="#resources" className="text-primary text-lg">Resources</a>
-            <a href="#contact" className="btn-primary text-center">Get Started</a>
+            <a href="#services" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Services</a>
+            <a href="#technology" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Technology</a>
+            <a href="#success" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Success Stories</a>
+            <Link href="/resources" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Resources</Link>
+            <a href="#contact" className="btn-primary text-center" onClick={() => setIsMenuOpen(false)}>Get Started</a>
           </div>
         </div>
       )}
@@ -123,17 +121,17 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-flex items-center space-x-2 bg-secondary/20 rounded-full px-4 py-2 mb-6">
               <Zap className="w-4 h-4 text-accent" />
-              <span className="text-sm font-semibold">Specializing in SBA 7(a) Small Dollar Loans</span>
+              <span className="text-sm font-semibold">Specializing in SBA 7(a) Small Business Lending</span>
             </div>
             
             <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
-              Your Technology-First Partner in{' '}
-              <span className="gradient-text">SBA Lending</span>
+              Your Tech-Forward Partner in{' '}
+              <span className="gradient-text">Small Business SBA Lending</span>
             </h1>
             
             <p className="text-xl mb-8 text-gray-200 animate-slide-up">
               Empowering community banks and credit unions with cutting-edge technology 
-              and personalized service for small dollar loan production under $350,000
+              and personalized boutique service for efficient SBA loan production
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
@@ -197,6 +195,68 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Success Stories Section */}
+      <section id="success" className="py-20 bg-white">
+        <div className="section-padding">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">
+              Proven <span className="gradient-text">Success Stories</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Data-driven results that demonstrate our impact on lenders' bottom lines
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="card border-l-4 border-secondary">
+              <h3 className="text-2xl font-bold mb-4 text-primary">Community Bank Success</h3>
+              <div className="space-y-3 mb-6">
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Loan Processing Time</span>
+                  <span className="font-bold text-secondary">-40%</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">SBA Loan Volume</span>
+                  <span className="font-bold text-secondary">+25%</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Non-Interest Income</span>
+                  <span className="font-bold text-secondary">+$2.3M</span>
+                </div>
+              </div>
+              <p className="text-gray-600 italic">
+                "BOD Financial transformed our SBA lending operations. Their technology platform 
+                and boutique service model helped us compete with larger institutions."
+              </p>
+              <p className="text-sm text-gray-500 mt-4">- Chief Lending Officer, Midwest Community Bank</p>
+            </div>
+            
+            <div className="card border-l-4 border-secondary">
+              <h3 className="text-2xl font-bold mb-4 text-primary">Credit Union Partnership</h3>
+              <div className="space-y-3 mb-6">
+                <div className="flex justify-between">
+                  <span className="text-gray-600">First Year Portfolio Growth</span>
+                  <span className="font-bold text-secondary">$8.5M</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Member Satisfaction</span>
+                  <span className="font-bold text-secondary">94%</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-600">Compliance Issues</span>
+                  <span className="font-bold text-secondary">Zero</span>
+                </div>
+              </div>
+              <p className="text-gray-600 italic">
+                "The modular service approach allowed us to start with just underwriting support 
+                and expand as we grew. Perfect for our needs."
+              </p>
+              <p className="text-sm text-gray-500 mt-4">- CEO, Regional Credit Union</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Technology Section */}
       <section id="technology" className="py-20 bg-primary text-white">
         <div className="section-padding">
@@ -219,7 +279,7 @@ export default function Home() {
                 ))}
               </div>
               
-              <a href="#demo" className="btn-primary mt-8 inline-flex items-center">
+              <a href="#contact" className="btn-primary mt-8 inline-flex items-center">
                 Request Platform Demo
                 <ChevronRight className="ml-2" size={20} />
               </a>
@@ -277,10 +337,10 @@ export default function Home() {
               Schedule Consultation
               <Phone className="ml-2" size={20} />
             </a>
-            <a href="#resources" className="border-2 border-white hover:bg-white hover:text-secondary font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center">
+            <Link href="/resources" className="border-2 border-white hover:bg-white hover:text-secondary font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center">
               <BookOpen className="mr-2" size={20} />
               Access Resources
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -364,10 +424,8 @@ export default function Home() {
         <div className="section-padding">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">B</span>
-              </div>
-              <span className="font-bold text-xl">BOD Financial Group</span>
+              <img src="/images/bod_logo_8.24-(1).png" alt="BOD Financial Group" className="h-10" />
+              <span className="font-bold text-xl">BOD Financial Group LLC</span>
             </div>
             
             <p className="text-gray-400">

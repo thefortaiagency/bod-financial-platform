@@ -8,12 +8,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#2C3E50',
-        secondary: '#18BC9C',
-        accent: '#F39C12',
-        'bod-dark': '#1A252F',
-        'bod-green': '#15A085',
-        'bod-gold': '#E67E22',
+        primary: '#003366',     // Navy Blue (from BOD branding)
+        secondary: '#FFB81C',   // Gold (from BOD branding)
+        accent: '#00539B',      // Bright Blue accent
+        'bod-navy': '#002147',  // Deep Navy
+        'bod-gold': '#FFD700',  // Bright Gold
+        'bod-gray': '#4A4A4A',  // Professional Gray
+        'bod-light': '#F8F9FA', // Light background
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

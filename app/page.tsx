@@ -119,14 +119,19 @@ export default function Home() {
       <section className="pt-24 pb-16 bg-gradient-to-br from-bod-dark via-primary to-bod-dark text-white">
         <div className="section-padding py-20">
           <div className="max-w-4xl mx-auto text-center">
+            {/* Large Centered Logo */}
+            <div className="mb-8">
+              <img src="/images/bod_logo_8.24-(1).png" alt="BOD Financial Group" className="h-32 md:h-40 mx-auto mb-4 drop-shadow-2xl" />
+            </div>
+            
             <div className="inline-flex items-center space-x-2 bg-secondary/20 rounded-full px-4 py-2 mb-6">
               <Zap className="w-4 h-4 text-accent" />
               <span className="text-sm font-semibold">Specializing in SBA 7(a) Small Business Lending</span>
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in text-white">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in text-white">
               Your Tech-Forward Partner in{' '}
-              <span className="text-secondary font-bold">Small Business SBA Lending</span>
+              <span className="text-bod-blue font-bold">Small Business SBA Lending</span>
             </h1>
             
             <p className="text-xl mb-8 text-gray-200 animate-slide-up">
@@ -154,7 +159,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-secondary mb-2">{stat.value}</div>
+                <div className="text-4xl font-bold text-bod-blue mb-2">{stat.value}</div>
                 <div className="text-primary font-semibold">{stat.label}</div>
               </div>
             ))}
@@ -167,7 +172,7 @@ export default function Home() {
         <div className="section-padding">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-primary">
-              Comprehensive <span className="text-secondary font-bold">SBA Lending Solutions</span>
+              Comprehensive <span className="text-bod-blue font-bold">SBA Lending Solutions</span>
             </h2>
             <p className="text-xl text-primary max-w-3xl mx-auto">
               Choose the services you need with our modular approach, or leverage our complete end-to-end solution
@@ -186,7 +191,7 @@ export default function Home() {
                     <span>Specialized Focus</span>
                   </div>
                 )}
-                <service.icon className="w-12 h-12 text-secondary mb-4" />
+                <service.icon className="w-12 h-12 text-bod-blue mb-4" />
                 <h3 className="text-xl font-bold mb-3">{service.title}</h3>
                 <p className="text-primary">{service.description}</p>
               </div>
@@ -200,7 +205,7 @@ export default function Home() {
         <div className="section-padding">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-primary">
-              Proven <span className="text-secondary font-bold">Success Stories</span>
+              Proven <span className="text-bod-blue font-bold">Success Stories</span>
             </h2>
             <p className="text-xl text-primary max-w-3xl mx-auto">
               Data-driven results that demonstrate our impact on lenders' bottom lines
@@ -213,15 +218,15 @@ export default function Home() {
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between">
                   <span className="text-primary">Loan Processing Time</span>
-                  <span className="font-bold text-secondary">-40%</span>
+                  <span className="font-bold text-bod-blue">-40%</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-primary">SBA Loan Volume</span>
-                  <span className="font-bold text-secondary">+25%</span>
+                  <span className="font-bold text-bod-blue">+25%</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-primary">Non-Interest Income</span>
-                  <span className="font-bold text-secondary">+$2.3M</span>
+                  <span className="font-bold text-bod-blue">+$2.3M</span>
                 </div>
               </div>
               <p className="text-primary italic">
@@ -236,15 +241,15 @@ export default function Home() {
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between">
                   <span className="text-primary">First Year Portfolio Growth</span>
-                  <span className="font-bold text-secondary">$8.5M</span>
+                  <span className="font-bold text-bod-blue">$8.5M</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-primary">Member Satisfaction</span>
-                  <span className="font-bold text-secondary">94%</span>
+                  <span className="font-bold text-bod-blue">94%</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-primary">Compliance Issues</span>
-                  <span className="font-bold text-secondary">Zero</span>
+                  <span className="font-bold text-bod-blue">Zero</span>
                 </div>
               </div>
               <p className="text-primary italic">
@@ -263,7 +268,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold mb-6">
-                Industry-Leading <span className="text-secondary">Technology Stack</span>
+                Industry-Leading <span className="text-bod-blue">Technology Stack</span>
               </h2>
               <p className="text-xl mb-8 text-white">
                 Our advanced platform streamlines every aspect of SBA lending, 
@@ -273,7 +278,7 @@ export default function Home() {
               <div className="space-y-4">
                 {techFeatures.map((feature, index) => (
                   <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-6 h-6 text-bod-blue flex-shrink-0 mt-0.5" />
                     <span className="text-white">{feature}</span>
                   </div>
                 ))}
@@ -290,30 +295,30 @@ export default function Home() {
                 <div className="bg-white/10 rounded-lg p-4">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm text-white">Loan Processing Speed</span>
-                    <span className="text-secondary font-bold">+40%</span>
+                    <span className="text-bod-blue font-bold">+40%</span>
                   </div>
                   <div className="w-full bg-white/20 rounded-full h-2">
-                    <div className="bg-secondary h-2 rounded-full" style={{width: '85%'}}></div>
+                    <div className="bg-bod-blue h-2 rounded-full" style={{width: '85%'}}></div>
                   </div>
                 </div>
                 
                 <div className="bg-white/10 rounded-lg p-4">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm text-white">Compliance Accuracy</span>
-                    <span className="text-secondary font-bold">98%</span>
+                    <span className="text-bod-blue font-bold">98%</span>
                   </div>
                   <div className="w-full bg-white/20 rounded-full h-2">
-                    <div className="bg-secondary h-2 rounded-full" style={{width: '98%'}}></div>
+                    <div className="bg-bod-blue h-2 rounded-full" style={{width: '98%'}}></div>
                   </div>
                 </div>
                 
                 <div className="bg-white/10 rounded-lg p-4">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm text-white">Client Satisfaction</span>
-                    <span className="text-secondary font-bold">4.9/5</span>
+                    <span className="text-bod-blue font-bold">4.9/5</span>
                   </div>
                   <div className="w-full bg-white/20 rounded-full h-2">
-                    <div className="bg-secondary h-2 rounded-full" style={{width: '95%'}}></div>
+                    <div className="bg-bod-blue h-2 rounded-full" style={{width: '95%'}}></div>
                   </div>
                 </div>
               </div>

@@ -9,9 +9,10 @@ module.exports = {
     extend: {
       colors: {
         primary: '#003366',     // Navy Blue for text
-        secondary: '#00B5A3',   // BOD Teal (Pantone 299 equivalent)
+        secondary: '#40A9E0',   // BOD Logo Blue - matches the logo exactly
         accent: '#F39C12',      // Gold accent
         'bod-teal': '#00B5A3',  // BOD Brand Teal
+        'bod-blue': '#40A9E0',  // Exact logo blue color
         'bod-navy': '#002147',  // Deep Navy
         'bod-gold': '#F39C12',  // Professional Gold
         'bod-gray': '#2C3E50',  // Professional Gray (higher contrast)

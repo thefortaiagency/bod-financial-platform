@@ -116,14 +116,14 @@ export default function AboutPage() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-white z-50 pt-20">
-          <div className="flex flex-col space-y-4 p-6">
-            <Link href="/services" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Services</Link>
-            <Link href="/technology" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Technology</Link>
-            <Link href="/success" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Success Stories</Link>
-            <Link href="/resources" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Resources</Link>
-            <Link href="/about" className="text-bod-blue text-lg font-semibold" onClick={() => setIsMenuOpen(false)}>About</Link>
-            <Link href="#contact" className="btn-primary text-center" onClick={() => setIsMenuOpen(false)}>Get Started</Link>
+        <div className="fixed inset-0 bg-white z-50 pt-20 shadow-lg">
+          <div className="flex flex-col space-y-6 p-6">
+            <Link href="/services" className="text-primary text-lg font-medium hover:text-bod-blue transition-colors py-2 px-4 rounded-lg hover:bg-gray-50" onClick={() => setIsMenuOpen(false)}>Services</Link>
+            <Link href="/technology" className="text-primary text-lg font-medium hover:text-bod-blue transition-colors py-2 px-4 rounded-lg hover:bg-gray-50" onClick={() => setIsMenuOpen(false)}>Technology</Link>
+            <Link href="/success" className="text-primary text-lg font-medium hover:text-bod-blue transition-colors py-2 px-4 rounded-lg hover:bg-gray-50" onClick={() => setIsMenuOpen(false)}>Success Stories</Link>
+            <Link href="/resources" className="text-primary text-lg font-medium hover:text-bod-blue transition-colors py-2 px-4 rounded-lg hover:bg-gray-50" onClick={() => setIsMenuOpen(false)}>Resources</Link>
+            <Link href="/about" className="text-bod-blue text-lg font-semibold py-2 px-4 rounded-lg bg-bod-blue/10" onClick={() => setIsMenuOpen(false)}>About</Link>
+            <Link href="#contact" className="btn-primary text-center mt-4" onClick={() => setIsMenuOpen(false)}>Get Started</Link>
           </div>
         </div>
       )}

@@ -101,6 +101,7 @@ export default function AboutPage() {
               <Link href="/success" className="text-primary hover:text-bod-blue transition">Success Stories</Link>
               <Link href="/resources" className="text-primary hover:text-bod-blue transition">Resources</Link>
               <Link href="/about" className="text-bod-blue font-semibold">About</Link>
+              <Link href="#contact" className="btn-primary">Get Started</Link>
             </div>
             
             <button 
@@ -122,6 +123,7 @@ export default function AboutPage() {
             <Link href="/success" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Success Stories</Link>
             <Link href="/resources" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Resources</Link>
             <Link href="/about" className="text-bod-blue text-lg font-semibold" onClick={() => setIsMenuOpen(false)}>About</Link>
+            <Link href="#contact" className="btn-primary text-center" onClick={() => setIsMenuOpen(false)}>Get Started</Link>
           </div>
         </div>
       )}
@@ -263,7 +265,7 @@ export default function AboutPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 bg-primary text-white">
+      <section id="contact" className="py-20 bg-primary text-white">
         <div className="section-padding">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">

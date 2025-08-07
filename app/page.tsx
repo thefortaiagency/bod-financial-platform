@@ -6,7 +6,7 @@ import {
   DollarSign, TrendingUp, Shield, Package, CheckCircle, 
   Laptop, Users, Award, BarChart3, Clock, Phone, 
   Mail, MapPin, ChevronRight, Menu, X, ArrowRight,
-  Zap, Target, BookOpen, Calculator
+  Zap, Target, BookOpen
 } from 'lucide-react'
 
 export default function Home() {
@@ -152,10 +152,10 @@ export default function Home() {
                 Start Your Partnership
                 <ArrowRight className="ml-2" size={20} />
               </a>
-              <a href="#calculator" className="btn-secondary inline-flex items-center justify-center">
-                <Calculator className="mr-2" size={20} />
-                Calculate Your ROI
-              </a>
+              <Link href="/services" className="btn-secondary inline-flex items-center justify-center">
+                <BookOpen className="mr-2" size={20} />
+                View Our Services
+              </Link>
             </div>
           </div>
         </div>

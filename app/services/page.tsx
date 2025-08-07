@@ -184,7 +184,7 @@ export default function ServicesPage() {
             <div className="mb-8">
               <img src="/images/bod_logo_8.24-(1).png" alt="BOD Financial Group" className="h-32 mx-auto mb-6 drop-shadow-2xl" />
             </div>
-            <h1 className="text-5xl font-bold mb-6 text-white">Complete SBA Lending Solutions</h1>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Complete SBA Lending Solutions</h1>
             <p className="text-xl text-white max-w-3xl mx-auto">
               Choose from our modular service packages or leverage our complete end-to-end solution 
               for seamless SBA 7(a) small business lending.

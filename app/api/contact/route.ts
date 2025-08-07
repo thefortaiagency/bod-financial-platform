@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { sendContactNotification } from '@/lib/email'
 
 export async function POST(request: NextRequest) {
   try {
@@ -8,7 +9,7 @@ export async function POST(request: NextRequest) {
     // Basic validation
     if (!name || !email || !company || !message) {
       return NextResponse.json(
-        { error: 'Missing required fields' },
+        { success: false, message: 'Please fill in all required fields.' },
         { status: 400 }
       )
     }
@@ -17,49 +18,38 @@ export async function POST(request: NextRequest) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
       return NextResponse.json(
-        { error: 'Invalid email format' },
+        { success: false, message: 'Invalid email format' },
         { status: 400 }
       )
     }
 
-    // Log the contact form submission (in production, you'd send this to your email service)
-    console.log('Contact form submission:', {
+    // Send notifications
+    const notificationData = {
       name,
       email,
-      company,
       phone,
+      company,
       loanVolume,
-      message,
-      timestamp: new Date().toISOString(),
+      message
+    }
+    
+    // Send email notification using Resend
+    const emailSent = await sendContactNotification(notificationData)
+    
+    if (!emailSent) {
+      console.error('Failed to send email notification')
+      // Don't fail the whole request, but log it
+    }
+
+    return NextResponse.json({ 
+      success: true, 
+      message: 'Thank you for your interest! We\'ll contact you within 24 hours.',
+      emailSent: emailSent 
     })
-
-    // Here you would typically:
-    // 1. Send an email to BOD Financial
-    // 2. Add to a CRM system
-    // 3. Store in a database
-    // 4. Send confirmation email to the user
-    
-    // For now, we'll just simulate a successful response
-    
-    // TODO: Implement actual email sending using your preferred service
-    // Examples:
-    // - Resend API
-    // - SendGrid
-    // - AWS SES
-    // - Gmail API
-    
-    return NextResponse.json(
-      { 
-        success: true, 
-        message: 'Thank you for your inquiry! We will get back to you within 24 hours.' 
-      },
-      { status: 200 }
-    )
-
   } catch (error) {
     console.error('Contact form error:', error)
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { success: false, message: 'Something went wrong. Please try again.' },
       { status: 500 }
     )
   }

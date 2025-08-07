@@ -128,9 +128,9 @@ export default function AboutPage() {
 
       {/* Hero */}
       <section 
-        className="py-20 bg-gradient-to-br from-primary via-bod-blue to-primary text-white relative overflow-hidden"
+        className="py-20 bg-gradient-to-br from-bod-dark via-primary to-bod-dark text-white relative overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(to bottom right, rgba(0, 51, 102, 0.85), rgba(64, 169, 224, 0.75), rgba(0, 51, 102, 0.85)), url('/images/hero-bg-about-hero.jpg')`,
+          backgroundImage: `linear-gradient(to bottom right, rgba(26, 37, 47, 0.9), rgba(0, 51, 102, 0.85), rgba(26, 37, 47, 0.9)), url('/images/hero-bg-about-hero.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -142,7 +142,7 @@ export default function AboutPage() {
               <img src="/images/bod_logo_8.24-(1).png" alt="BOD Financial Group" className="h-32 mx-auto mb-6 drop-shadow-2xl" />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              About <span className="text-white font-bold">BOD Financial Group</span>
+              About <span className="text-bod-blue">BOD Financial Group</span>
             </h1>
             <p className="text-xl text-white max-w-3xl mx-auto">
               Founded on the belief that community banks and credit unions deserve the same 

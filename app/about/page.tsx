@@ -115,7 +115,7 @@ export default function AboutPage() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-white z-40 pt-20">
+        <div className="fixed inset-0 bg-white z-50 pt-20">
           <div className="flex flex-col space-y-4 p-6">
             <Link href="/services" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Services</Link>
             <Link href="/technology" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Technology</Link>
@@ -128,9 +128,9 @@ export default function AboutPage() {
 
       {/* Hero */}
       <section 
-        className="py-20 bg-gradient-to-br from-bod-dark via-primary to-bod-dark text-white relative overflow-hidden"
+        className="py-20 bg-gradient-to-br from-primary via-bod-blue to-primary text-white relative overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(to bottom right, rgba(26, 37, 47, 0.9), rgba(0, 51, 102, 0.85), rgba(26, 37, 47, 0.9)), url('/images/hero-bg-about-hero.jpg')`,
+          backgroundImage: `linear-gradient(to bottom right, rgba(0, 51, 102, 0.85), rgba(64, 169, 224, 0.75), rgba(0, 51, 102, 0.85)), url('/images/hero-bg-about-hero.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'

@@ -195,7 +195,7 @@ export default function ResourcesPage() {
             <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
               Get real-time answers to your SBA lending questions from our team of experts
             </p>
-            <Link href="/#contact" className="bg-white text-primary hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition inline-block">
+            <Link href="/about" className="bg-white text-primary hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition inline-block">
               Submit Your Question
             </Link>
           </div>

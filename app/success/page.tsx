@@ -311,7 +311,7 @@ export default function SuccessPage() {
             See how much BOD Financial could improve your SBA lending performance and profitability.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/#contact" className="bg-white text-bod-blue hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center">
+            <Link href="/about" className="bg-white text-bod-blue hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center">
               Schedule ROI Analysis
               <BarChart3 className="ml-2" size={20} />
             </Link>

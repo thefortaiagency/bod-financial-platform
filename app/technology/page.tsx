@@ -219,7 +219,7 @@ export default function TechnologyPage() {
                 ))}
               </div>
               
-              <Link href="/#contact" className="btn-primary bg-bod-blue hover:bg-bod-blue/90 inline-flex items-center">
+              <Link href="/about" className="btn-primary bg-bod-blue hover:bg-bod-blue/90 inline-flex items-center">
                 Request Platform Demo
                 <Laptop className="ml-2" size={20} />
               </Link>
@@ -334,7 +334,7 @@ export default function TechnologyPage() {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             See how our platform can streamline your SBA lending operations and improve your bottom line.
           </p>
-          <Link href="/#contact" className="bg-white text-bod-blue hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center">
+          <Link href="/about" className="bg-white text-bod-blue hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center">
             Schedule Technology Demo
             <Laptop className="ml-2" size={20} />
           </Link>

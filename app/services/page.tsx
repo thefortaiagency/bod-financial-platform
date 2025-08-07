@@ -277,7 +277,7 @@ export default function ServicesPage() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/#contact" className={`btn-primary w-full inline-block text-center ${
+                <Link href="/about" className={`btn-primary w-full inline-block text-center ${
                   pkg.popular ? 'bg-bod-blue hover:bg-bod-blue/90' : ''
                 }`}>
                   Get Started
@@ -298,7 +298,7 @@ export default function ServicesPage() {
             Let's discuss which service package best fits your lending goals and volume.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/#contact" className="bg-white text-bod-blue hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center">
+            <Link href="/about" className="bg-white text-bod-blue hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center">
               Schedule Consultation
               <Phone className="ml-2" size={20} />
             </Link>

@@ -79,7 +79,7 @@ export default function ResourcesPage() {
       <section className="py-20 bg-gradient-to-br from-primary to-bod-navy text-white">
         <div className="section-padding">
           <h1 className="text-5xl font-bold mb-6">Knowledge Hub</h1>
-          <p className="text-xl text-gray-200 max-w-3xl">
+          <p className="text-xl text-white max-w-3xl">
             Your comprehensive resource center for SBA lending best practices, 
             compliance updates, and industry insights.
           </p>
@@ -100,7 +100,7 @@ export default function ResourcesPage() {
                 <div key={index} className="card hover:shadow-xl transition-shadow">
                   <guide.icon className="w-12 h-12 text-secondary mb-4" />
                   <h3 className="text-xl font-bold mb-2">{guide.title}</h3>
-                  <p className="text-gray-600 mb-4">{guide.description}</p>
+                  <p className="text-bod-gray mb-4">{guide.description}</p>
                   <a href={guide.link} className="text-secondary hover:text-accent font-semibold">
                     Download Guide →
                   </a>
@@ -120,7 +120,7 @@ export default function ResourcesPage() {
                 <div key={index} className="card bg-bod-light hover:shadow-xl transition-shadow">
                   <webinar.icon className="w-12 h-12 text-secondary mb-4" />
                   <h3 className="text-xl font-bold mb-2">{webinar.title}</h3>
-                  <p className="text-gray-600 mb-4">{webinar.description}</p>
+                  <p className="text-bod-gray mb-4">{webinar.description}</p>
                   <a href={webinar.link} className="btn-primary inline-block">
                     Register Now
                   </a>
@@ -155,7 +155,7 @@ export default function ResourcesPage() {
           <div className="mt-20 bg-gradient-to-r from-secondary to-bod-gold rounded-2xl p-12 text-center">
             <Users className="w-16 h-16 text-white mx-auto mb-6" />
             <h2 className="text-3xl font-bold text-white mb-4">Ask an Expert</h2>
-            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-white text-lg mb-8 max-w-2xl mx-auto">
               Get real-time answers to your SBA lending questions from our team of experts
             </p>
             <Link href="/#contact" className="bg-white text-primary hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition inline-block">

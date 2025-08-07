@@ -8,16 +8,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#003366',     // Navy Blue (from BOD branding)
-        secondary: '#FFB81C',   // Gold (from BOD branding)
-        accent: '#00539B',      // Bright Blue accent
+        primary: '#003366',     // Navy Blue for text
+        secondary: '#00B5A3',   // BOD Teal (Pantone 299 equivalent)
+        accent: '#F39C12',      // Gold accent
+        'bod-teal': '#00B5A3',  // BOD Brand Teal
         'bod-navy': '#002147',  // Deep Navy
-        'bod-gold': '#FFD700',  // Bright Gold
-        'bod-gray': '#4A4A4A',  // Professional Gray
+        'bod-gold': '#F39C12',  // Professional Gold
+        'bod-gray': '#2C3E50',  // Professional Gray (higher contrast)
         'bod-light': '#F8F9FA', // Light background
+        'bod-dark': '#1A252F', // Dark backgrounds
+        white: '#FFFFFF',
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['Arial', 'Helvetica', 'sans-serif'],
+        serif: ['Georgia', 'Times New Roman', 'serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

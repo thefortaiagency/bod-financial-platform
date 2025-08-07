@@ -265,7 +265,7 @@ export default function Home() {
               <h2 className="text-4xl font-bold mb-6">
                 Industry-Leading <span className="text-secondary">Technology Stack</span>
               </h2>
-              <p className="text-xl mb-8 text-gray-200">
+              <p className="text-xl mb-8 text-white">
                 Our advanced platform streamlines every aspect of SBA lending, 
                 giving you real-time visibility and control over your loan portfolio.
               </p>
@@ -274,7 +274,7 @@ export default function Home() {
                 {techFeatures.map((feature, index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-6 h-6 text-secondary flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-200">{feature}</span>
+                    <span className="text-white">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -289,7 +289,7 @@ export default function Home() {
               <div className="space-y-6">
                 <div className="bg-white/10 rounded-lg p-4">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-gray-300">Loan Processing Speed</span>
+                    <span className="text-sm text-white">Loan Processing Speed</span>
                     <span className="text-secondary font-bold">+40%</span>
                   </div>
                   <div className="w-full bg-white/20 rounded-full h-2">
@@ -299,7 +299,7 @@ export default function Home() {
                 
                 <div className="bg-white/10 rounded-lg p-4">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-gray-300">Compliance Accuracy</span>
+                    <span className="text-sm text-white">Compliance Accuracy</span>
                     <span className="text-secondary font-bold">98%</span>
                   </div>
                   <div className="w-full bg-white/20 rounded-full h-2">
@@ -309,7 +309,7 @@ export default function Home() {
                 
                 <div className="bg-white/10 rounded-lg p-4">
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-gray-300">Client Satisfaction</span>
+                    <span className="text-sm text-white">Client Satisfaction</span>
                     <span className="text-secondary font-bold">4.9/5</span>
                   </div>
                   <div className="w-full bg-white/20 rounded-full h-2">
@@ -351,7 +351,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-4">Get in Touch</h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-bod-gray">
                 Let's discuss how BOD Financial can accelerate your SBA lending success
               </p>
             </div>
@@ -376,7 +376,7 @@ export default function Home() {
               <div className="text-center">
                 <MapPin className="w-12 h-12 text-secondary mx-auto mb-4" />
                 <h3 className="font-bold mb-2">Visit Us</h3>
-                <p className="text-gray-600">
+                <p className="text-bod-gray">
                   8107 Tranquilla Place<br />
                   Fort Wayne, IN 46815
                 </p>
@@ -428,7 +428,7 @@ export default function Home() {
               <span className="font-bold text-xl">BOD Financial Group LLC</span>
             </div>
             
-            <p className="text-gray-400">
+            <p className="text-white opacity-80">
               © 2024 BOD Financial Group LLC. All rights reserved.
             </p>
           </div>

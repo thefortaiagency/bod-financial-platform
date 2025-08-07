@@ -85,9 +85,9 @@ export default function Home() {
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#services" className={`${scrolled ? 'text-primary' : 'text-white'} hover:text-bod-blue transition`}>Services</a>
-              <a href="#technology" className={`${scrolled ? 'text-primary' : 'text-white'} hover:text-bod-blue transition`}>Technology</a>
-              <a href="#success" className={`${scrolled ? 'text-primary' : 'text-white'} hover:text-bod-blue transition`}>Success Stories</a>
+              <Link href="/services" className={`${scrolled ? 'text-primary' : 'text-white'} hover:text-bod-blue transition`}>Services</Link>
+              <Link href="/technology" className={`${scrolled ? 'text-primary' : 'text-white'} hover:text-bod-blue transition`}>Technology</Link>
+              <Link href="/success" className={`${scrolled ? 'text-primary' : 'text-white'} hover:text-bod-blue transition`}>Success Stories</Link>
               <Link href="/resources" className={`${scrolled ? 'text-primary' : 'text-white'} hover:text-bod-blue transition`}>Resources</Link>
               <a href="#contact" className="btn-primary">Get Started</a>
             </div>
@@ -106,9 +106,9 @@ export default function Home() {
       {isMenuOpen && (
         <div className="fixed inset-0 bg-white z-40 pt-20">
           <div className="flex flex-col space-y-4 p-6">
-            <a href="#services" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Services</a>
-            <a href="#technology" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Technology</a>
-            <a href="#success" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Success Stories</a>
+            <Link href="/services" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Services</Link>
+            <Link href="/technology" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Technology</Link>
+            <Link href="/success" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Success Stories</Link>
             <Link href="/resources" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Resources</Link>
             <a href="#contact" className="btn-primary text-center" onClick={() => setIsMenuOpen(false)}>Get Started</a>
           </div>

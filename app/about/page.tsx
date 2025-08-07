@@ -142,7 +142,7 @@ export default function AboutPage() {
               <img src="/images/bod_logo_8.24-(1).png" alt="BOD Financial Group" className="h-32 mx-auto mb-6 drop-shadow-2xl" />
             </div>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              About <span className="text-bod-blue">BOD Financial Group</span>
+              About <span className="text-white font-bold">BOD Financial Group</span>
             </h1>
             <p className="text-xl text-white max-w-3xl mx-auto">
               Founded on the belief that community banks and credit unions deserve the same 

@@ -1,13 +1,15 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
 import { 
   TrendingUp, DollarSign, Users, Award, BarChart3, 
   CheckCircle, Clock, Target, Building, Handshake,
-  Phone, Mail, BookOpen, Star, MapPin
+  Phone, Mail, BookOpen, Star, MapPin, Menu, X
 } from 'lucide-react'
 
 export default function SuccessPage() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const successMetrics = [
     { value: "40%", label: "Average Processing Time Reduction", icon: Clock },
     { value: "25%", label: "Average Volume Increase", icon: TrendingUp },
@@ -118,15 +120,35 @@ export default function SuccessPage() {
               <Link href="/resources" className="text-primary hover:text-bod-blue transition">Resources</Link>
               <Link href="/#contact" className="btn-primary">Get Started</Link>
             </div>
+            
+            <button 
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden text-primary"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
       </nav>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 bg-white z-40 pt-20">
+          <div className="flex flex-col space-y-4 p-6">
+            <Link href="/services" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Services</Link>
+            <Link href="/technology" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Technology</Link>
+            <Link href="/success" className="text-bod-blue text-lg font-semibold" onClick={() => setIsMenuOpen(false)}>Success Stories</Link>
+            <Link href="/resources" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Resources</Link>
+            <Link href="/#contact" className="btn-primary text-center" onClick={() => setIsMenuOpen(false)}>Get Started</Link>
+          </div>
+        </div>
+      )}
 
       {/* Hero */}
       <section 
         className="py-20 bg-gradient-to-br from-bod-dark via-primary to-bod-dark text-white relative overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(to bottom right, rgba(26, 37, 47, 0.9), rgba(0, 51, 102, 0.85), rgba(26, 37, 47, 0.9)), url('/images/hero-bg-tech-finance-fusion.jpg')`,
+          backgroundImage: `linear-gradient(to bottom right, rgba(26, 37, 47, 0.9), rgba(0, 51, 102, 0.85), rgba(26, 37, 47, 0.9)), url('/images/hero-bg-success-hero.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'

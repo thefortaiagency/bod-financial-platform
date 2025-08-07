@@ -1,9 +1,11 @@
 'use client'
 
-import { BookOpen, Video, FileText, Users, Download, PlayCircle } from 'lucide-react'
+import { useState } from 'react'
+import { BookOpen, Video, FileText, Users, Download, PlayCircle, Menu, X } from 'lucide-react'
 import Link from 'next/link'
 
 export default function ResourcesPage() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const resources = {
     guides: [
       {
@@ -65,18 +67,46 @@ export default function ResourcesPage() {
               <img src="/images/bod_logo_8.24-(1).png" alt="BOD Financial Group" className="h-12" />
             </Link>
             <div className="hidden md:flex items-center space-x-8">
-              <Link href="/#services" className="text-primary hover:text-secondary transition">Services</Link>
-              <Link href="/#technology" className="text-primary hover:text-secondary transition">Technology</Link>
-              <Link href="/#about" className="text-primary hover:text-secondary transition">About</Link>
+              <Link href="/services" className="text-primary hover:text-secondary transition">Services</Link>
+              <Link href="/technology" className="text-primary hover:text-secondary transition">Technology</Link>
+              <Link href="/success" className="text-primary hover:text-secondary transition">Success Stories</Link>
               <Link href="/resources" className="text-secondary font-semibold">Resources</Link>
               <Link href="/#contact" className="btn-primary">Get Started</Link>
             </div>
+            
+            <button 
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="md:hidden text-primary"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
       </nav>
 
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 bg-white z-40 pt-20">
+          <div className="flex flex-col space-y-4 p-6">
+            <Link href="/services" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Services</Link>
+            <Link href="/technology" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Technology</Link>
+            <Link href="/success" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Success Stories</Link>
+            <Link href="/resources" className="text-secondary text-lg font-semibold" onClick={() => setIsMenuOpen(false)}>Resources</Link>
+            <Link href="/#contact" className="btn-primary text-center" onClick={() => setIsMenuOpen(false)}>Get Started</Link>
+          </div>
+        </div>
+      )}
+
       {/* Hero */}
-      <section className="py-20 bg-gradient-to-br from-primary to-bod-navy text-white">
+      <section 
+        className="py-20 bg-gradient-to-br from-primary to-bod-navy text-white relative overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(to bottom right, rgba(26, 37, 47, 0.9), rgba(0, 51, 102, 0.85), rgba(26, 37, 47, 0.9)), url('/images/hero-bg-resources-hero.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         <div className="section-padding">
           <h1 className="text-5xl font-bold mb-6">Knowledge Hub</h1>
           <p className="text-xl text-white max-w-3xl">

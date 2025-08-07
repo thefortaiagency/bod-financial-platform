@@ -218,7 +218,7 @@ export default function ServicesPage() {
                   </div>
                 )}
                 <service.icon className="w-12 h-12 text-bod-blue mb-4" />
-                <h3 className="text-xl font-bold mb-3">{service.title}</h3>
+                <h3 className="text-xl font-bold mb-3 text-primary">{service.title}</h3>
                 <p className="text-primary mb-4">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
@@ -261,7 +261,7 @@ export default function ServicesPage() {
                     </span>
                   </div>
                 )}
-                <h3 className="text-2xl font-bold mb-2">{pkg.name}</h3>
+                <h3 className="text-2xl font-bold mb-2 text-primary">{pkg.name}</h3>
                 <div className="mb-4">
                   <span className="text-4xl font-bold text-bod-blue">{pkg.price}</span>
                   <span className="text-primary ml-2">{pkg.period}</span>

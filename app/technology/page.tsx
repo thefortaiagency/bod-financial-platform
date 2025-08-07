@@ -172,7 +172,7 @@ export default function TechnologyPage() {
             {techFeatures.map((feature, index) => (
               <div key={index} className="card">
                 <feature.icon className="w-12 h-12 text-bod-blue mb-4" />
-                <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-bold mb-3 text-primary">{feature.title}</h3>
                 <p className="text-primary mb-4">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.features.map((item, idx) => (
@@ -305,17 +305,17 @@ export default function TechnologyPage() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="card text-center">
                 <Lock className="w-12 h-12 text-bod-blue mx-auto mb-4" />
-                <h3 className="text-lg font-bold mb-2">256-bit Encryption</h3>
+                <h3 className="text-lg font-bold mb-2 text-primary">256-bit Encryption</h3>
                 <p className="text-primary text-sm">End-to-end encryption for all data transmission and storage</p>
               </div>
               <div className="card text-center">
                 <Eye className="w-12 h-12 text-bod-blue mx-auto mb-4" />
-                <h3 className="text-lg font-bold mb-2">Audit Trails</h3>
+                <h3 className="text-lg font-bold mb-2 text-primary">Audit Trails</h3>
                 <p className="text-primary text-sm">Complete activity logging for compliance and security monitoring</p>
               </div>
               <div className="card text-center">
                 <Cloud className="w-12 h-12 text-bod-blue mx-auto mb-4" />
-                <h3 className="text-lg font-bold mb-2">SOC 2 Compliance</h3>
+                <h3 className="text-lg font-bold mb-2 text-primary">SOC 2 Compliance</h3>
                 <p className="text-primary text-sm">Independently audited security controls and procedures</p>
               </div>
             </div>

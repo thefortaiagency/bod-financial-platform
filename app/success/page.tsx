@@ -206,7 +206,7 @@ export default function SuccessPage() {
                       <Building className="w-6 h-6 text-bod-blue" />
                       <span className="text-sm text-primary font-semibold">{study.type}</span>
                     </div>
-                    <h3 className="text-2xl font-bold mb-4">{study.title}</h3>
+                    <h3 className="text-2xl font-bold mb-4 text-primary">{study.title}</h3>
                     
                     <div className="mb-6">
                       <h4 className="font-bold text-primary mb-2">Challenge:</h4>

@@ -108,11 +108,16 @@ export default function ResourcesPage() {
         }}
       >
         <div className="section-padding">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Knowledge Hub</h1>
-          <p className="text-xl text-white max-w-3xl">
-            Your comprehensive resource center for SBA lending best practices, 
-            compliance updates, and industry insights.
-          </p>
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="mb-8">
+              <img src="/images/bod_logo_8.24-(1).png" alt="BOD Financial Group" className="h-32 mx-auto mb-6 drop-shadow-2xl" />
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Knowledge Hub</h1>
+            <p className="text-xl text-white max-w-3xl mx-auto">
+              Your comprehensive resource center for SBA lending best practices, 
+              compliance updates, and industry insights.
+            </p>
+          </div>
         </div>
       </section>
 

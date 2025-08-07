@@ -143,7 +143,8 @@ export default function ServicesPage() {
               <Link href="/technology" className="text-primary hover:text-bod-blue transition">Technology</Link>
               <Link href="/success" className="text-primary hover:text-bod-blue transition">Success Stories</Link>
               <Link href="/resources" className="text-primary hover:text-bod-blue transition">Resources</Link>
-              <Link href="/#contact" className="btn-primary">Get Started</Link>
+              <Link href="/about" className="text-primary hover:text-bod-blue transition">About</Link>
+              <Link href="/about" className="btn-primary">Get Started</Link>
             </div>
             
             <button 
@@ -164,7 +165,8 @@ export default function ServicesPage() {
             <Link href="/technology" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Technology</Link>
             <Link href="/success" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Success Stories</Link>
             <Link href="/resources" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Resources</Link>
-            <Link href="/#contact" className="btn-primary text-center" onClick={() => setIsMenuOpen(false)}>Get Started</Link>
+            <Link href="/about" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>About</Link>
+            <Link href="/about" className="btn-primary text-center" onClick={() => setIsMenuOpen(false)}>Get Started</Link>
           </div>
         </div>
       )}

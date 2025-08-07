@@ -71,7 +71,8 @@ export default function ResourcesPage() {
               <Link href="/technology" className="text-primary hover:text-secondary transition">Technology</Link>
               <Link href="/success" className="text-primary hover:text-secondary transition">Success Stories</Link>
               <Link href="/resources" className="text-secondary font-semibold">Resources</Link>
-              <Link href="/#contact" className="btn-primary">Get Started</Link>
+              <Link href="/about" className="text-primary hover:text-secondary transition">About</Link>
+              <Link href="/about" className="btn-primary">Get Started</Link>
             </div>
             
             <button 
@@ -92,7 +93,8 @@ export default function ResourcesPage() {
             <Link href="/technology" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Technology</Link>
             <Link href="/success" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Success Stories</Link>
             <Link href="/resources" className="text-secondary text-lg font-semibold" onClick={() => setIsMenuOpen(false)}>Resources</Link>
-            <Link href="/#contact" className="btn-primary text-center" onClick={() => setIsMenuOpen(false)}>Get Started</Link>
+            <Link href="/about" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>About</Link>
+            <Link href="/about" className="btn-primary text-center" onClick={() => setIsMenuOpen(false)}>Get Started</Link>
           </div>
         </div>
       )}

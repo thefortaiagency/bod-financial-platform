@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import { 
   DollarSign, TrendingUp, Shield, Package, CheckCircle, 
@@ -11,15 +11,6 @@ import {
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
 
   const services = [
     {
@@ -75,26 +66,23 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Navigation */}
-      <nav className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-lg' : 'bg-black/20 backdrop-blur-sm'
-      }`}>
+      <nav className="bg-white shadow-lg">
         <div className="section-padding py-4">
           <div className="flex justify-between items-center">
-            <div className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2">
               <img src="/images/bod_logo_8.24-(1).png" alt="BOD Financial Group" className="h-12" />
+            </Link>
+            <div className="hidden md:flex items-center space-x-8">
+              <Link href="/services" className="text-primary hover:text-bod-blue transition">Services</Link>
+              <Link href="/technology" className="text-primary hover:text-bod-blue transition">Technology</Link>
+              <Link href="/success" className="text-primary hover:text-bod-blue transition">Success Stories</Link>
+              <Link href="/resources" className="text-primary hover:text-bod-blue transition">Resources</Link>
+              <Link href="#contact" className="btn-primary">Get Started</Link>
             </div>
             
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/services" className={`${scrolled ? 'text-primary' : 'text-white'} hover:text-bod-blue transition`}>Services</Link>
-              <Link href="/technology" className={`${scrolled ? 'text-primary' : 'text-white'} hover:text-bod-blue transition`}>Technology</Link>
-              <Link href="/success" className={`${scrolled ? 'text-primary' : 'text-white'} hover:text-bod-blue transition`}>Success Stories</Link>
-              <Link href="/resources" className={`${scrolled ? 'text-primary' : 'text-white'} hover:text-bod-blue transition`}>Resources</Link>
-              <a href="#contact" className="btn-primary">Get Started</a>
-            </div>
-
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`md:hidden ${scrolled ? 'text-primary' : 'text-white'}`}
+              className="md:hidden text-primary"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -110,7 +98,7 @@ export default function Home() {
             <Link href="/technology" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Technology</Link>
             <Link href="/success" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Success Stories</Link>
             <Link href="/resources" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Resources</Link>
-            <a href="#contact" className="btn-primary text-center" onClick={() => setIsMenuOpen(false)}>Get Started</a>
+            <Link href="#contact" className="btn-primary text-center" onClick={() => setIsMenuOpen(false)}>Get Started</Link>
           </div>
         </div>
       )}

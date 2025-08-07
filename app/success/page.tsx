@@ -159,7 +159,7 @@ export default function SuccessPage() {
             <div className="mb-8">
               <img src="/images/bod_logo_8.24-(1).png" alt="BOD Financial Group" className="h-32 mx-auto mb-6 drop-shadow-2xl" />
             </div>
-            <h1 className="text-5xl font-bold mb-6">
+            <h1 className="text-5xl font-bold mb-6 text-white">
               Proven <span className="text-bod-blue">Success Stories</span>
             </h1>
             <p className="text-xl text-white max-w-3xl mx-auto">

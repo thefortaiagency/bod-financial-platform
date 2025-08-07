@@ -108,7 +108,7 @@ export default function ResourcesPage() {
         }}
       >
         <div className="section-padding">
-          <h1 className="text-5xl font-bold mb-6">Knowledge Hub</h1>
+          <h1 className="text-5xl font-bold mb-6 text-white">Knowledge Hub</h1>
           <p className="text-xl text-white max-w-3xl">
             Your comprehensive resource center for SBA lending best practices, 
             compliance updates, and industry insights.

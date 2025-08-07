@@ -76,7 +76,7 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50">
       {/* Navigation */}
       <nav className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-lg' : 'bg-transparent'
+        scrolled ? 'bg-white shadow-lg' : 'bg-black/20 backdrop-blur-sm'
       }`}>
         <div className="section-padding py-4">
           <div className="flex justify-between items-center">
@@ -85,16 +85,16 @@ export default function Home() {
             </div>
             
             <div className="hidden md:flex items-center space-x-8">
-              <a href="#services" className="text-primary hover:text-secondary transition">Services</a>
-              <a href="#technology" className="text-primary hover:text-secondary transition">Technology</a>
-              <a href="#success" className="text-primary hover:text-secondary transition">Success Stories</a>
-              <Link href="/resources" className="text-primary hover:text-secondary transition">Resources</Link>
+              <a href="#services" className={`${scrolled ? 'text-primary' : 'text-white'} hover:text-bod-blue transition`}>Services</a>
+              <a href="#technology" className={`${scrolled ? 'text-primary' : 'text-white'} hover:text-bod-blue transition`}>Technology</a>
+              <a href="#success" className={`${scrolled ? 'text-primary' : 'text-white'} hover:text-bod-blue transition`}>Success Stories</a>
+              <Link href="/resources" className={`${scrolled ? 'text-primary' : 'text-white'} hover:text-bod-blue transition`}>Resources</Link>
               <a href="#contact" className="btn-primary">Get Started</a>
             </div>
 
             <button 
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden text-primary"
+              className={`md:hidden ${scrolled ? 'text-primary' : 'text-white'}`}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -116,12 +116,20 @@ export default function Home() {
       )}
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-bod-dark via-primary to-bod-dark text-white">
+      <section 
+        className="pt-24 pb-16 bg-gradient-to-br from-bod-dark via-primary to-bod-dark text-white relative overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(to bottom right, rgba(26, 37, 47, 0.9), rgba(0, 51, 102, 0.85), rgba(26, 37, 47, 0.9)), url('/images/hero-bg-tech-finance-fusion.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
         <div className="section-padding py-20">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Large Centered Logo */}
+            {/* Extra Large Centered Logo */}
             <div className="mb-8">
-              <img src="/images/bod_logo_8.24-(1).png" alt="BOD Financial Group" className="h-32 md:h-40 mx-auto mb-4 drop-shadow-2xl" />
+              <img src="/images/bod_logo_8.24-(1).png" alt="BOD Financial Group" className="h-44 md:h-56 lg:h-64 mx-auto mb-6 drop-shadow-2xl animate-pulse-slow" />
             </div>
             
             <div className="inline-flex items-center space-x-2 bg-secondary/20 rounded-full px-4 py-2 mb-6">

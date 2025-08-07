@@ -100,7 +100,7 @@ export default function ResourcesPage() {
                 <div key={index} className="card hover:shadow-xl transition-shadow">
                   <guide.icon className="w-12 h-12 text-secondary mb-4" />
                   <h3 className="text-xl font-bold mb-2">{guide.title}</h3>
-                  <p className="text-bod-gray mb-4">{guide.description}</p>
+                  <p className="text-primary mb-4">{guide.description}</p>
                   <a href={guide.link} className="text-secondary hover:text-accent font-semibold">
                     Download Guide →
                   </a>
@@ -120,7 +120,7 @@ export default function ResourcesPage() {
                 <div key={index} className="card bg-bod-light hover:shadow-xl transition-shadow">
                   <webinar.icon className="w-12 h-12 text-secondary mb-4" />
                   <h3 className="text-xl font-bold mb-2">{webinar.title}</h3>
-                  <p className="text-bod-gray mb-4">{webinar.description}</p>
+                  <p className="text-primary mb-4">{webinar.description}</p>
                   <a href={webinar.link} className="btn-primary inline-block">
                     Register Now
                   </a>
@@ -140,7 +140,7 @@ export default function ResourcesPage() {
                 <div key={index} className="card hover:shadow-xl transition-shadow">
                   <div className="flex items-center justify-between mb-4">
                     <video.icon className="w-12 h-12 text-secondary" />
-                    <span className="text-sm text-gray-500">{video.duration}</span>
+                    <span className="text-sm text-primary opacity-75">{video.duration}</span>
                   </div>
                   <h3 className="text-xl font-bold mb-2">{video.title}</h3>
                   <a href={video.link} className="text-secondary hover:text-accent font-semibold">

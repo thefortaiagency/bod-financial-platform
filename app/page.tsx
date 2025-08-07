@@ -124,9 +124,9 @@ export default function Home() {
               <span className="text-sm font-semibold">Specializing in SBA 7(a) Small Business Lending</span>
             </div>
             
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in text-white">
               Your Tech-Forward Partner in{' '}
-              <span className="gradient-text">Small Business SBA Lending</span>
+              <span className="text-secondary font-bold">Small Business SBA Lending</span>
             </h1>
             
             <p className="text-xl mb-8 text-gray-200 animate-slide-up">
@@ -155,7 +155,7 @@ export default function Home() {
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-4xl font-bold text-secondary mb-2">{stat.value}</div>
-                <div className="text-gray-600">{stat.label}</div>
+                <div className="text-primary font-semibold">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -166,10 +166,10 @@ export default function Home() {
       <section id="services" className="py-20 bg-gray-50">
         <div className="section-padding">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">
-              Comprehensive <span className="gradient-text">SBA Lending Solutions</span>
+            <h2 className="text-4xl font-bold mb-4 text-primary">
+              Comprehensive <span className="text-secondary font-bold">SBA Lending Solutions</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-primary max-w-3xl mx-auto">
               Choose the services you need with our modular approach, or leverage our complete end-to-end solution
             </p>
           </div>
@@ -188,7 +188,7 @@ export default function Home() {
                 )}
                 <service.icon className="w-12 h-12 text-secondary mb-4" />
                 <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                <p className="text-gray-600">{service.description}</p>
+                <p className="text-primary">{service.description}</p>
               </div>
             ))}
           </div>
@@ -199,10 +199,10 @@ export default function Home() {
       <section id="success" className="py-20 bg-white">
         <div className="section-padding">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">
-              Proven <span className="gradient-text">Success Stories</span>
+            <h2 className="text-4xl font-bold mb-4 text-primary">
+              Proven <span className="text-secondary font-bold">Success Stories</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-primary max-w-3xl mx-auto">
               Data-driven results that demonstrate our impact on lenders' bottom lines
             </p>
           </div>
@@ -212,46 +212,46 @@ export default function Home() {
               <h3 className="text-2xl font-bold mb-4 text-primary">Community Bank Success</h3>
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Loan Processing Time</span>
+                  <span className="text-primary">Loan Processing Time</span>
                   <span className="font-bold text-secondary">-40%</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">SBA Loan Volume</span>
+                  <span className="text-primary">SBA Loan Volume</span>
                   <span className="font-bold text-secondary">+25%</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Non-Interest Income</span>
+                  <span className="text-primary">Non-Interest Income</span>
                   <span className="font-bold text-secondary">+$2.3M</span>
                 </div>
               </div>
-              <p className="text-gray-600 italic">
+              <p className="text-primary italic">
                 "BOD Financial transformed our SBA lending operations. Their technology platform 
                 and boutique service model helped us compete with larger institutions."
               </p>
-              <p className="text-sm text-gray-500 mt-4">- Chief Lending Officer, Midwest Community Bank</p>
+              <p className="text-sm text-primary opacity-75 mt-4">- Chief Lending Officer, Midwest Community Bank</p>
             </div>
             
             <div className="card border-l-4 border-secondary">
               <h3 className="text-2xl font-bold mb-4 text-primary">Credit Union Partnership</h3>
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between">
-                  <span className="text-gray-600">First Year Portfolio Growth</span>
+                  <span className="text-primary">First Year Portfolio Growth</span>
                   <span className="font-bold text-secondary">$8.5M</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Member Satisfaction</span>
+                  <span className="text-primary">Member Satisfaction</span>
                   <span className="font-bold text-secondary">94%</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-gray-600">Compliance Issues</span>
+                  <span className="text-primary">Compliance Issues</span>
                   <span className="font-bold text-secondary">Zero</span>
                 </div>
               </div>
-              <p className="text-gray-600 italic">
+              <p className="text-primary italic">
                 "The modular service approach allowed us to start with just underwriting support 
                 and expand as we grew. Perfect for our needs."
               </p>
-              <p className="text-sm text-gray-500 mt-4">- CEO, Regional Credit Union</p>
+              <p className="text-sm text-primary opacity-75 mt-4">- CEO, Regional Credit Union</p>
             </div>
           </div>
         </div>
@@ -330,7 +330,7 @@ export default function Home() {
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Join leading community banks and credit unions who trust BOD Financial 
-            for their small dollar SBA lending needs.
+            for their small business SBA lending needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="#contact" className="bg-white text-secondary hover:bg-gray-100 font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center">
@@ -351,7 +351,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-4">Get in Touch</h2>
-              <p className="text-xl text-bod-gray">
+              <p className="text-xl text-primary">
                 Let's discuss how BOD Financial can accelerate your SBA lending success
               </p>
             </div>
@@ -376,7 +376,7 @@ export default function Home() {
               <div className="text-center">
                 <MapPin className="w-12 h-12 text-secondary mx-auto mb-4" />
                 <h3 className="font-bold mb-2">Visit Us</h3>
-                <p className="text-bod-gray">
+                <p className="text-primary">
                   8107 Tranquilla Place<br />
                   Fort Wayne, IN 46815
                 </p>

@@ -82,52 +82,7 @@ export default function ServicesPage() {
     }
   ]
 
-  const servicePackages = [
-    {
-      name: "Essential",
-      price: "$89",
-      period: "per loan",
-      description: "Perfect for getting started with SBA lending",
-      features: [
-        "SBA eligibility assessment",
-        "Basic loan structuring",
-        "Compliance checking",
-        "Email support",
-        "Standard processing time"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$149",
-      period: "per loan", 
-      description: "Most popular choice for active lenders",
-      features: [
-        "Everything in Essential",
-        "Real-time loan tracking",
-        "Document management portal",
-        "Direct team communication",
-        "Priority processing",
-        "Secondary market optimization"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$249",
-      period: "per loan",
-      description: "Complete white-glove service",
-      features: [
-        "Everything in Professional",
-        "Dedicated relationship manager",
-        "Custom reporting dashboards",
-        "API integrations",
-        "24/7 phone support",
-        "Quarterly strategy sessions"
-      ],
-      popular: false
-    }
-  ]
+  // Service packages removed per request
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -236,57 +191,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Service Packages */}
-      <section className="py-20 bg-gray-50">
-        <div className="section-padding">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-primary">
-              Service <span className="text-bod-blue font-bold">Packages</span>
-            </h2>
-            <p className="text-xl text-primary max-w-3xl mx-auto">
-              Choose the level of service that fits your lending volume and needs
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {servicePackages.map((pkg, index) => (
-              <div 
-                key={index} 
-                className={`card text-center relative ${
-                  pkg.popular ? 'border-2 border-bod-blue transform scale-105' : ''
-                }`}
-              >
-                {pkg.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-bod-blue text-white px-4 py-1 rounded-full text-sm font-bold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                <h3 className="text-2xl font-bold mb-2 text-primary">{pkg.name}</h3>
-                <div className="mb-4">
-                  <span className="text-4xl font-bold text-bod-blue">{pkg.price}</span>
-                  <span className="text-primary ml-2">{pkg.period}</span>
-                </div>
-                <p className="text-primary mb-6">{pkg.description}</p>
-                <ul className="space-y-3 mb-8">
-                  {pkg.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start text-sm text-primary">
-                      <CheckCircle className="w-4 h-4 text-bod-blue mr-2 flex-shrink-0 mt-0.5" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <Link href="/about" className={`btn-primary w-full inline-block text-center ${
-                  pkg.popular ? 'bg-bod-blue hover:bg-bod-blue/90' : ''
-                }`}>
-                  Get Started
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Service Packages section removed per request */}
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-bod-blue to-primary text-white">

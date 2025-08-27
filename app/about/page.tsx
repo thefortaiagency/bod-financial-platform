@@ -94,7 +94,6 @@ export default function AboutPage() {
               <Link href="/services" className="text-primary hover:text-bod-blue transition">Services</Link>
               <Link href="/technology" className="text-primary hover:text-bod-blue transition">Technology</Link>
               <Link href="/success" className="text-primary hover:text-bod-blue transition">Success Stories</Link>
-              <Link href="/resources" className="text-primary hover:text-bod-blue transition">Resources</Link>
               <Link href="/about" className="text-bod-blue font-semibold">About</Link>
               <Link href="#contact" className="btn-primary">Get Started</Link>
             </div>
@@ -116,7 +115,6 @@ export default function AboutPage() {
             <Link href="/services" className="text-primary text-lg font-medium hover:text-bod-blue transition-colors py-2 px-4 rounded-lg hover:bg-gray-50" onClick={() => setIsMenuOpen(false)}>Services</Link>
             <Link href="/technology" className="text-primary text-lg font-medium hover:text-bod-blue transition-colors py-2 px-4 rounded-lg hover:bg-gray-50" onClick={() => setIsMenuOpen(false)}>Technology</Link>
             <Link href="/success" className="text-primary text-lg font-medium hover:text-bod-blue transition-colors py-2 px-4 rounded-lg hover:bg-gray-50" onClick={() => setIsMenuOpen(false)}>Success Stories</Link>
-            <Link href="/resources" className="text-primary text-lg font-medium hover:text-bod-blue transition-colors py-2 px-4 rounded-lg hover:bg-gray-50" onClick={() => setIsMenuOpen(false)}>Resources</Link>
             <Link href="/about" className="text-bod-blue text-lg font-semibold py-2 px-4 rounded-lg bg-bod-blue/10" onClick={() => setIsMenuOpen(false)}>About</Link>
             <Link href="#contact" className="btn-primary text-center mt-4" onClick={() => setIsMenuOpen(false)}>Get Started</Link>
           </div>

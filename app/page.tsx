@@ -64,7 +64,6 @@ export default function Home() {
               <Link href="/services" className="text-primary hover:text-bod-blue transition">Services</Link>
               <Link href="/technology" className="text-primary hover:text-bod-blue transition">Technology</Link>
               <Link href="/success" className="text-primary hover:text-bod-blue transition">Success Stories</Link>
-              <Link href="/resources" className="text-primary hover:text-bod-blue transition">Resources</Link>
               <Link href="/about" className="text-primary hover:text-bod-blue transition">About</Link>
               <Link href="/about" className="btn-primary">Get Started</Link>
             </div>
@@ -86,7 +85,6 @@ export default function Home() {
             <Link href="/services" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Services</Link>
             <Link href="/technology" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Technology</Link>
             <Link href="/success" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Success Stories</Link>
-            <Link href="/resources" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Resources</Link>
             <Link href="/about" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>About</Link>
             <Link href="/about" className="btn-primary text-center" onClick={() => setIsMenuOpen(false)}>Get Started</Link>
           </div>
@@ -193,10 +191,6 @@ export default function Home() {
               Schedule Consultation
               <Phone className="ml-2" size={20} />
             </a>
-            <Link href="/resources" className="border-2 border-white hover:bg-white hover:text-secondary font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-flex items-center justify-center">
-              <BookOpen className="mr-2" size={20} />
-              Access Resources
-            </Link>
           </div>
         </div>
       </section>

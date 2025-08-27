@@ -51,7 +51,7 @@ export default function AboutPage() {
     {
       name: "Noah Smith",
       title: "Founder & CEO",
-      description: "20+ years in SBA lending with a passion for helping community banks compete with larger institutions through technology and personalized service.",
+      description: "Leading a team with 75 years of combined Commercial Lending Experience. Noah brings 20+ years in SBA lending with a passion for helping community banks compete with larger institutions through technology and personalized service.",
       image: "/images/team-placeholder.jpg"
     }
   ]
@@ -79,12 +79,7 @@ export default function AboutPage() {
     }
   ]
 
-  const achievements = [
-    { metric: "98%", label: "Client Satisfaction Rate", icon: Star },
-    { metric: "40%", label: "Faster Processing Times", icon: Clock },
-    { metric: "25%", label: "Average Volume Increase", icon: TrendingUp },
-    { metric: "Zero", label: "SBA Compliance Issues", icon: Shield }
-  ]
+  // Achievements removed per request
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -197,17 +192,7 @@ export default function AboutPage() {
                 </ul>
               </div>
               
-              <div className="bg-gray-50 p-8 rounded-2xl">
-                <div className="grid grid-cols-2 gap-6">
-                  {achievements.map((achievement, index) => (
-                    <div key={index} className="text-center">
-                      <achievement.icon className="w-8 h-8 text-bod-blue mx-auto mb-2" />
-                      <div className="text-2xl font-bold text-bod-blue mb-1">{achievement.metric}</div>
-                      <div className="text-sm text-primary font-semibold">{achievement.label}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              {/* Achievements section removed per request */}
             </div>
           </div>
         </div>
@@ -296,8 +281,8 @@ export default function AboutPage() {
                     <Mail className="w-6 h-6 text-bod-blue flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="font-semibold text-white mb-1">Email</h4>
-                      <a href="mailto:info@bodfinancialgroup.com" className="text-bod-blue hover:text-white transition">
-                        info@bodfinancialgroup.com
+                      <a href="mailto:noreply@bodfinancialgroup.com" className="text-bod-blue hover:text-white transition">
+                        noreply@bodfinancialgroup.com
                       </a>
                     </div>
                   </div>

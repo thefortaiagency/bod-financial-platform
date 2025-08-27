@@ -83,26 +83,7 @@ export default function SuccessPage() {
     }
   ]
 
-  const industryRecognition = [
-    {
-      award: "SBA Lender of Excellence",
-      year: "2024",
-      organization: "Small Business Administration",
-      description: "Recognized for outstanding service to small businesses"
-    },
-    {
-      award: "Technology Innovation Award",
-      year: "2023", 
-      organization: "Independent Community Bankers of America",
-      description: "Leading platform innovation in SBA lending"
-    },
-    {
-      award: "Client Satisfaction Leader",
-      year: "2023",
-      organization: "Financial Technology Review",
-      description: "Highest client satisfaction in lending services"
-    }
-  ]
+  // Industry recognition removed per request
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -274,32 +255,7 @@ export default function SuccessPage() {
         </div>
       </section>
 
-      {/* Industry Recognition */}
-      <section className="py-20 bg-primary text-white">
-        <div className="section-padding">
-          <div className="text-center mb-16">
-            <Award className="w-16 h-16 text-bod-blue mx-auto mb-6" />
-            <h2 className="text-4xl font-bold mb-4">
-              Industry <span className="text-bod-blue">Recognition</span>
-            </h2>
-            <p className="text-xl text-white max-w-3xl mx-auto">
-              Our commitment to excellence has been recognized by leading industry organizations
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {industryRecognition.map((award, index) => (
-              <div key={index} className="card bg-white/10 backdrop-blur-sm text-center">
-                <Award className="w-12 h-12 text-bod-blue mx-auto mb-4" />
-                <h3 className="text-xl font-bold mb-2 text-white">{award.award}</h3>
-                <div className="text-bod-blue font-semibold mb-2">{award.year}</div>
-                <div className="text-sm text-white opacity-75 mb-3">{award.organization}</div>
-                <p className="text-sm text-white">{award.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Industry Recognition section removed per request */}
 
       {/* ROI Calculator CTA */}
       <section className="py-20 bg-gradient-to-r from-bod-blue to-primary text-white">

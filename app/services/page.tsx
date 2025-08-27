@@ -44,6 +44,7 @@ export default function ServicesPage() {
         "Underwriting support only",
         "Processing and documentation",
         "Closing coordination",
+        "Collection, Liquidation, UPP, Charge off & Wrap up Services",
         "Full end-to-end service"
       ]
     },

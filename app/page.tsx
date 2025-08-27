@@ -224,8 +224,8 @@ export default function Home() {
               <div className="text-center">
                 <Mail className="w-12 h-12 text-secondary mx-auto mb-4" />
                 <h3 className="font-bold mb-2">Email</h3>
-                <a href="mailto:info@bodfinancialgroup.com" className="text-secondary hover:underline">
-                  info@bodfinancialgroup.com
+                <a href="mailto:noreply@bodfinancialgroup.com" className="text-secondary hover:underline">
+                  noreply@bodfinancialgroup.com
                 </a>
               </div>
             </div>

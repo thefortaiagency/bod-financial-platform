@@ -47,21 +47,9 @@ export default function Home() {
     }
   ]
 
-  const stats = [
-    { value: "40%", label: "Faster Processing" },
-    { value: "25%", label: "Volume Increase" },
-    { value: "30+", label: "States Served" },
-    { value: "98%", label: "Approval Rate" }
-  ]
+  // Stats section removed per request
 
-  const techFeatures = [
-    "Real-time loan status tracking",
-    "Secure document upload & management",
-    "Direct messaging with BOD team",
-    "Automated compliance alerts",
-    "Performance analytics dashboard",
-    "Integration with bank systems"
-  ]
+  // Technology features removed per request
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -151,19 +139,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-12 bg-white">
-        <div className="section-padding">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-bod-blue mb-2">{stat.value}</div>
-                <div className="text-primary font-semibold">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Stats Section removed per request */}
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-gray-50">
@@ -198,132 +174,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Success Stories Section */}
-      <section id="success" className="py-20 bg-white">
-        <div className="section-padding">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-primary">
-              Proven <span className="text-bod-blue font-bold">Success Stories</span>
-            </h2>
-            <p className="text-xl text-primary max-w-3xl mx-auto">
-              Data-driven results that demonstrate our impact on lenders' bottom lines
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="card border-l-4 border-secondary">
-              <h3 className="text-2xl font-bold mb-4 text-primary">Community Bank Success</h3>
-              <div className="space-y-3 mb-6">
-                <div className="flex justify-between">
-                  <span className="text-primary">Loan Processing Time</span>
-                  <span className="font-bold text-bod-blue">-40%</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-primary">SBA Loan Volume</span>
-                  <span className="font-bold text-bod-blue">+25%</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-primary">Non-Interest Income</span>
-                  <span className="font-bold text-bod-blue">+$2.3M</span>
-                </div>
-              </div>
-              <p className="text-primary italic">
-                "BOD Financial transformed our SBA lending operations. Their technology platform 
-                and boutique service model helped us compete with larger institutions."
-              </p>
-              <p className="text-sm text-primary opacity-75 mt-4">- Chief Lending Officer, Midwest Community Bank</p>
-            </div>
-            
-            <div className="card border-l-4 border-secondary">
-              <h3 className="text-2xl font-bold mb-4 text-primary">Credit Union Partnership</h3>
-              <div className="space-y-3 mb-6">
-                <div className="flex justify-between">
-                  <span className="text-primary">First Year Portfolio Growth</span>
-                  <span className="font-bold text-bod-blue">$8.5M</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-primary">Member Satisfaction</span>
-                  <span className="font-bold text-bod-blue">94%</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-primary">Compliance Issues</span>
-                  <span className="font-bold text-bod-blue">Zero</span>
-                </div>
-              </div>
-              <p className="text-primary italic">
-                "The modular service approach allowed us to start with just underwriting support 
-                and expand as we grew. Perfect for our needs."
-              </p>
-              <p className="text-sm text-primary opacity-75 mt-4">- CEO, Regional Credit Union</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Success Stories Section removed per request */}
 
-      {/* Technology Section */}
-      <section id="technology" className="py-20 bg-primary text-white">
-        <div className="section-padding">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl font-bold mb-6">
-                Industry-Leading <span className="text-bod-blue">Technology Stack</span>
-              </h2>
-              <p className="text-xl mb-8 text-white">
-                Our advanced platform streamlines every aspect of SBA lending, 
-                giving you real-time visibility and control over your loan portfolio.
-              </p>
-              
-              <div className="space-y-4">
-                {techFeatures.map((feature, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <CheckCircle className="w-6 h-6 text-bod-blue flex-shrink-0 mt-0.5" />
-                    <span className="text-white">{feature}</span>
-                  </div>
-                ))}
-              </div>
-              
-              <a href="#contact" className="btn-primary mt-8 inline-flex items-center">
-                Request Platform Demo
-                <ChevronRight className="ml-2" size={20} />
-              </a>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-              <div className="space-y-6">
-                <div className="bg-white/10 rounded-lg p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-white">Loan Processing Speed</span>
-                    <span className="text-bod-blue font-bold">+40%</span>
-                  </div>
-                  <div className="w-full bg-white/20 rounded-full h-2">
-                    <div className="bg-bod-blue h-2 rounded-full" style={{width: '85%'}}></div>
-                  </div>
-                </div>
-                
-                <div className="bg-white/10 rounded-lg p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-white">Compliance Accuracy</span>
-                    <span className="text-bod-blue font-bold">98%</span>
-                  </div>
-                  <div className="w-full bg-white/20 rounded-full h-2">
-                    <div className="bg-bod-blue h-2 rounded-full" style={{width: '98%'}}></div>
-                  </div>
-                </div>
-                
-                <div className="bg-white/10 rounded-lg p-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-white">Client Satisfaction</span>
-                    <span className="text-bod-blue font-bold">4.9/5</span>
-                  </div>
-                  <div className="w-full bg-white/20 rounded-full h-2">
-                    <div className="bg-bod-blue h-2 rounded-full" style={{width: '95%'}}></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Technology Section removed per request */}
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-secondary to-bod-green text-white">
@@ -359,7 +212,7 @@ export default function Home() {
               </p>
             </div>
             
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-2xl mx-auto">
               <div className="text-center">
                 <Phone className="w-12 h-12 text-secondary mx-auto mb-4" />
                 <h3 className="font-bold mb-2">Call Us</h3>
@@ -374,15 +227,6 @@ export default function Home() {
                 <a href="mailto:info@bodfinancialgroup.com" className="text-secondary hover:underline">
                   info@bodfinancialgroup.com
                 </a>
-              </div>
-              
-              <div className="text-center">
-                <MapPin className="w-12 h-12 text-secondary mx-auto mb-4" />
-                <h3 className="font-bold mb-2">Visit Us</h3>
-                <p className="text-primary">
-                  8107 Tranquilla Place<br />
-                  Fort Wayne, IN 46815
-                </p>
               </div>
             </div>
             

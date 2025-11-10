@@ -69,7 +69,6 @@ export default function ResourcesPage() {
             <div className="hidden md:flex items-center space-x-8">
               <Link href="/services" className="text-primary hover:text-secondary transition">Services</Link>
               <Link href="/technology" className="text-primary hover:text-secondary transition">Technology</Link>
-              <Link href="/success" className="text-primary hover:text-secondary transition">Success Stories</Link>
               <Link href="/resources" className="text-secondary font-semibold">Resources</Link>
               <Link href="/about" className="text-primary hover:text-secondary transition">About</Link>
               <Link href="/about" className="btn-primary">Get Started</Link>
@@ -91,7 +90,6 @@ export default function ResourcesPage() {
           <div className="flex flex-col space-y-4 p-6">
             <Link href="/services" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Services</Link>
             <Link href="/technology" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Technology</Link>
-            <Link href="/success" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Success Stories</Link>
             <Link href="/resources" className="text-secondary text-lg font-semibold" onClick={() => setIsMenuOpen(false)}>Resources</Link>
             <Link href="/about" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>About</Link>
             <Link href="/about" className="btn-primary text-center" onClick={() => setIsMenuOpen(false)}>Get Started</Link>

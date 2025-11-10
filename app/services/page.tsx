@@ -97,7 +97,6 @@ export default function ServicesPage() {
             <div className="hidden md:flex items-center space-x-8">
               <Link href="/services" className="text-bod-blue font-semibold">Services</Link>
               <Link href="/technology" className="text-primary hover:text-bod-blue transition">Technology</Link>
-              <Link href="/success" className="text-primary hover:text-bod-blue transition">Success Stories</Link>
               <Link href="/about" className="text-primary hover:text-bod-blue transition">About</Link>
               <Link href="/about" className="btn-primary">Get Started</Link>
             </div>
@@ -118,7 +117,6 @@ export default function ServicesPage() {
           <div className="flex flex-col space-y-4 p-6">
             <Link href="/services" className="text-bod-blue text-lg font-semibold" onClick={() => setIsMenuOpen(false)}>Services</Link>
             <Link href="/technology" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Technology</Link>
-            <Link href="/success" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>Success Stories</Link>
             <Link href="/about" className="text-primary text-lg" onClick={() => setIsMenuOpen(false)}>About</Link>
             <Link href="/about" className="btn-primary text-center" onClick={() => setIsMenuOpen(false)}>Get Started</Link>
           </div>

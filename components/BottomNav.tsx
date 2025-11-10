@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Home, Briefcase, Cpu, Trophy, UserCircle } from 'lucide-react'
+import { Home, Briefcase, Cpu, UserCircle } from 'lucide-react'
 
 export default function BottomNav() {
   return (
@@ -29,14 +29,6 @@ export default function BottomNav() {
         >
           <Cpu className="w-6 h-6 group-hover:scale-110 transition-transform" />
           <span className="text-xs font-medium">Technology</span>
-        </Link>
-
-        <Link
-          href="/success"
-          className="flex flex-col items-center space-y-1 text-primary hover:text-bod-blue transition-colors group"
-        >
-          <Trophy className="w-6 h-6 group-hover:scale-110 transition-transform" />
-          <span className="text-xs font-medium">Success</span>
         </Link>
 
         <Link

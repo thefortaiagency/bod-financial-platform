@@ -279,8 +279,8 @@ export default function AboutPage() {
                     <Mail className="w-6 h-6 text-bod-blue flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="font-semibold text-white mb-1">Email</h4>
-                      <a href="mailto:noreply@bodfinancialgroup.com" className="text-bod-blue hover:text-white transition">
-                        noreply@bodfinancialgroup.com
+                      <a href="mailto:noah.smith@bodfinancialgroup.com" className="text-bod-blue hover:text-white transition">
+                        noah.smith@bodfinancialgroup.com
                       </a>
                     </div>
                   </div>

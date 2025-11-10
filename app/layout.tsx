@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import BottomNav from '@/components/BottomNav'
 
 export const metadata: Metadata = {
   title: 'BOD Financial Group - SBA 7(a) Small Business Lending Specialists',
@@ -21,8 +22,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-sans">
+      <body className="font-sans pb-20">
         {children}
+        <BottomNav />
       </body>
     </html>
   )

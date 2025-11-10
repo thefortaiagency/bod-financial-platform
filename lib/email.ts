@@ -110,7 +110,7 @@ export async function sendContactNotification(data: ContactFormData) {
         <div style="background: #f8fafc; padding: 20px; text-align: center; border-radius: 0 0 12px 12px; border: 1px solid #e5e7eb; border-top: none;">
           <p style="color: #6b7280; font-size: 12px; margin: 0;">
             Submitted at ${new Date().toLocaleString()}<br>
-            From: <a href="https://bodfin.thefortaiagency.ai" style="color: #40A9E0; text-decoration: none;">bodfin.thefortaiagency.ai</a>
+            From: <a href="https://www.bodfinancialgroup.com" style="color: #40A9E0; text-decoration: none;">www.bodfinancialgroup.com</a>
           </p>
         </div>
       </div>
@@ -197,7 +197,7 @@ export async function sendContactNotification(data: ContactFormData) {
                 </tr>
               </table>
               
-              <a href="https://bodfin.thefortaiagency.ai/services" 
+              <a href="https://www.bodfinancialgroup.com/services" 
                  style="display: inline-block; background: linear-gradient(135deg, #003366, #40A9E0); color: white; text-decoration: none; padding: 14px 35px; border-radius: 8px; font-weight: 600; font-size: 16px; box-shadow: 0 4px 6px rgba(0, 51, 102, 0.2);">
                 🔍 Explore Our Services
               </a>
@@ -220,7 +220,7 @@ export async function sendContactNotification(data: ContactFormData) {
               <em>"Your Tech-Forward Partner in Small Business SBA Lending"</em>
             </p>
             <p style="color: #6b7280; font-size: 13px; margin: 0;">
-              © 2024 BOD Financial Group LLC • <a href="https://bodfin.thefortaiagency.ai" style="color: #40A9E0; text-decoration: none;">bodfin.thefortaiagency.ai</a>
+              © 2024 BOD Financial Group LLC • <a href="https://www.bodfinancialgroup.com" style="color: #40A9E0; text-decoration: none;">www.bodfinancialgroup.com</a>
             </p>
           </div>
         </div>

@@ -6,6 +6,7 @@
 - **Production**: https://bodfin.thefortaiagency.ai
 - **GitHub**: https://github.com/thefortaiagency/bod-financial-platform
 - **Vercel**: Auto-deployed from main branch
+- **Local**: /Users/thefortob/Development/00-PRODUCTION/bod-financial-platform
 
 ## 📋 Project Overview
 Tech-forward lending service provider platform for Noah Smith / BOD Financial Group. Built with NEXUS Platform Automation for:

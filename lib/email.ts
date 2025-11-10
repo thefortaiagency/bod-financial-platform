@@ -120,9 +120,9 @@ export async function sendContactNotification(data: ContactFormData) {
     console.log('📧 Sending notification email to:', process.env.BOD_CONTACT_RECIPIENT || 'aoberlin@thefortaiagency.ai');
 
     const result = await resend.emails.send({
-      from: `BOD Financial <${process.env.RESEND_FROM_EMAIL || 'info@thefortaiagency.ai'}>`,
-      to: process.env.BOD_CONTACT_RECIPIENT || 'aoberlin@thefortaiagency.ai',
-      replyTo: data.email,
+      from: `BOD Financial <${(process.env.RESEND_FROM_EMAIL || 'info@thefortaiagency.ai').trim()}>`,
+      to: (process.env.BOD_CONTACT_RECIPIENT || 'aoberlin@thefortaiagency.ai').trim(),
+      replyTo: data.email.trim(),
       subject: `New Contact from ${data.name} - BOD Financial`,
       html: emailHtml,
       text: `New BOD Financial Contact Form Submission\n\nName: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone || 'Not provided'}\nCompany: ${data.company || 'Not provided'}\nLoan Volume: ${data.loanVolume || 'Not provided'}\n\nMessage:\n${data.message}\n\nSubmitted at ${new Date().toLocaleString()}`
@@ -238,8 +238,8 @@ export async function sendContactNotification(data: ContactFormData) {
       console.log('📧 Sending confirmation email to user:', data.email);
 
       const confirmResult = await resend.emails.send({
-        from: `BOD Financial <${process.env.RESEND_FROM_EMAIL || 'info@thefortaiagency.ai'}>`,
-        to: data.email,
+        from: `BOD Financial <${(process.env.RESEND_FROM_EMAIL || 'info@thefortaiagency.ai').trim()}>`,
+        to: data.email.trim(),
         subject: 'Thank you for contacting BOD Financial Group',
         html: confirmationHtml,
         text: `Hi ${data.name},\n\nWe've received your inquiry and appreciate your interest in BOD Financial Group. Our SBA lending experts will review your message and get back to you within 24 hours.\n\nBest regards,\nThe BOD Financial Team`

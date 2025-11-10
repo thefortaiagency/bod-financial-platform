@@ -116,6 +116,9 @@ export async function sendContactNotification(data: ContactFormData) {
       </div>
     `;
 
+    // Send notification email to Coach
+    console.log('📧 Sending notification email to:', process.env.BOD_CONTACT_RECIPIENT || 'aoberlin@thefortaiagency.ai');
+
     const result = await resend.emails.send({
       from: `BOD Financial <${process.env.RESEND_FROM_EMAIL || 'info@thefortaiagency.ai'}>`,
       to: process.env.BOD_CONTACT_RECIPIENT || 'aoberlin@thefortaiagency.ai',
@@ -125,10 +128,16 @@ export async function sendContactNotification(data: ContactFormData) {
       text: `New BOD Financial Contact Form Submission\n\nName: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone || 'Not provided'}\nCompany: ${data.company || 'Not provided'}\nLoan Volume: ${data.loanVolume || 'Not provided'}\n\nMessage:\n${data.message}\n\nSubmitted at ${new Date().toLocaleString()}`
     });
 
-    console.log('✅ BOD Financial contact email sent via Resend:', result.data?.id);
-    
-    // Wait 1 second to avoid Resend rate limit (2 requests per second)
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    if (result.error) {
+      console.error('❌ Failed to send notification email:', result.error);
+      throw new Error(`Notification email failed: ${result.error.message}`);
+    }
+
+    console.log('✅ Notification email sent successfully! ID:', result.data?.id);
+
+    // Wait 2 seconds to avoid Resend rate limit (2 requests per second max)
+    console.log('⏳ Waiting 2 seconds before sending confirmation email...');
+    await new Promise(resolve => setTimeout(resolve, 2000));
     
     // Send confirmation email to the user
     try {
@@ -226,15 +235,21 @@ export async function sendContactNotification(data: ContactFormData) {
         </div>
       `;
 
-      await resend.emails.send({
+      console.log('📧 Sending confirmation email to user:', data.email);
+
+      const confirmResult = await resend.emails.send({
         from: `BOD Financial <${process.env.RESEND_FROM_EMAIL || 'info@thefortaiagency.ai'}>`,
         to: data.email,
         subject: 'Thank you for contacting BOD Financial Group',
         html: confirmationHtml,
         text: `Hi ${data.name},\n\nWe've received your inquiry and appreciate your interest in BOD Financial Group. Our SBA lending experts will review your message and get back to you within 24 hours.\n\nBest regards,\nThe BOD Financial Team`
       });
-      
-      console.log('✅ User confirmation email sent');
+
+      if (confirmResult.error) {
+        console.error('❌ Failed to send confirmation email:', confirmResult.error);
+      } else {
+        console.log('✅ Confirmation email sent successfully! ID:', confirmResult.data?.id);
+      }
     } catch (confirmError) {
       console.log('⚠️ User confirmation email failed, but continuing:', confirmError);
       // Don't fail the whole request if confirmation email fails

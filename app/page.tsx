@@ -11,6 +11,49 @@ import {
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    message: ''
+  })
+  const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
+  const [errorMessage, setErrorMessage] = useState('')
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setFormStatus('loading')
+    setErrorMessage('')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setFormStatus('success')
+        setFormData({ name: '', email: '', company: '', message: '' })
+        setTimeout(() => setFormStatus('idle'), 5000)
+      } else {
+        setFormStatus('error')
+        setErrorMessage(data.message || 'Failed to send message')
+      }
+    } catch (error) {
+      setFormStatus('error')
+      setErrorMessage('Network error. Please try again.')
+    }
+  }
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }))
+  }
 
   const services = [
     {
@@ -223,34 +266,70 @@ export default function Home() {
             </div>
             
             <div className="card">
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <input
                     type="text"
+                    name="name"
                     placeholder="Your Name"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-secondary"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    disabled={formStatus === 'loading'}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-secondary disabled:bg-gray-100"
                   />
                   <input
                     type="email"
+                    name="email"
                     placeholder="Email Address"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-secondary"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    disabled={formStatus === 'loading'}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-secondary disabled:bg-gray-100"
                   />
                 </div>
-                
+
                 <input
                   type="text"
+                  name="company"
                   placeholder="Institution Name"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-secondary"
+                  value={formData.company}
+                  onChange={handleInputChange}
+                  required
+                  disabled={formStatus === 'loading'}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-secondary disabled:bg-gray-100"
                 />
-                
+
                 <textarea
+                  name="message"
                   placeholder="Tell us about your SBA lending needs"
                   rows={4}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-secondary"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  required
+                  disabled={formStatus === 'loading'}
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-secondary disabled:bg-gray-100"
                 />
-                
-                <button type="submit" className="btn-primary w-full">
-                  Send Message
+
+                {formStatus === 'success' && (
+                  <div className="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg">
+                    ✅ Thank you! We'll contact you within 24 hours.
+                  </div>
+                )}
+
+                {formStatus === 'error' && (
+                  <div className="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg">
+                    ❌ {errorMessage}
+                  </div>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={formStatus === 'loading'}
+                  className="btn-primary w-full disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {formStatus === 'loading' ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </div>
